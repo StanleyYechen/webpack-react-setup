@@ -4,8 +4,8 @@ import './index.scss';
 import App from './App';
 
 ReactDOM.render(
-  <App />,
+  React.createElement(App),
   document.getElementById('root'),
 );
-// hmr set for dev env
-module.hot.accept();
+// enable react-hot-loader
+module.hot && module.hot.accept();

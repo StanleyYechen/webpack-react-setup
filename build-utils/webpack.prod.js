@@ -35,7 +35,9 @@ module.exports = {
     new PurifyCSS({
       paths: glob.sync([
         path.resolve(__dirname, '../src/*.js'),
-        path.resolve(__dirname, '../src/*.jsx')
+        path.resolve(__dirname, '../src/*.jsx'),
+        path.resolve(__dirname, '../src/*.ts'),
+        path.resolve(__dirname, '../src/*.tsx')
       ])
     }),
     new Dotenv({

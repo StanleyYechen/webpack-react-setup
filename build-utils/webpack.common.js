@@ -1,7 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const DashboardPlugin = require("webpack-dashboard/plugin");
 
 module.exports = {
-  entry: ['./src/index.js'],
+  entry: ['./src/index.ts'],
   output: {
     path: __dirname + '/../dist',
     publicPath: '/',
@@ -10,9 +11,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
+        test: /\.(js|jsx|ts|tsx)$/,
         use: ['babel-loader', 'eslint-loader'],
+        exclude: /node_modules/,
       },
       {
         test: /\.(jpe?g|png|gif|svg|ttf|ttf2|woff|woff2)$/,
@@ -26,13 +27,14 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx', '.ts', '.tsx']
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'React App',
       favicon: './public/favicon.ico',
       template: './public/index.ejs',
-    })
+    }),
+    new DashboardPlugin()
   ]
 };

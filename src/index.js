@@ -5,8 +5,7 @@ import App from './App';
 
 ReactDOM.render(
   <App />,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
-
 // hmr set for dev env
-process.env.NODE_ENV === 'development' && module.hot.accept();
+module.hot.accept();

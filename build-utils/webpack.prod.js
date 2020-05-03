@@ -25,6 +25,18 @@ module.exports = {
       }
     ]
   },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vender: {
+          name: 'vender',
+          test: /node_modules/,
+          chunks: 'all',
+          priority: 10,
+        }
+      }
+    }
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({

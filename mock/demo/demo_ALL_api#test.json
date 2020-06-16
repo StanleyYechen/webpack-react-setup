@@ -1,0 +1,10 @@
+{
+  "protocol": "http",
+  "pathname": "api/test",
+  "method": "ALL",
+  "projectUniqId": "831c4434-7197-4780-9251-cadc485207c3",
+  "description": "测试接口",
+  "currentScene": "normal",
+  "proxyConfig": {},
+  "uniqId": "cae5c828-5fe7-40d2-ae84-0f30120bba18"
+}

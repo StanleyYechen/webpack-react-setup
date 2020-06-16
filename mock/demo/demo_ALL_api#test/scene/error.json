@@ -1,0 +1,13 @@
+{
+  "sceneName": "error",
+  "data": {
+    "code": -100
+  },
+  "interfaceUniqId": "cae5c828-5fe7-40d2-ae84-0f30120bba18",
+  "contextConfig": {
+    "responseDelay": 0,
+    "responseStatus": 200,
+    "responseHeaders": {}
+  },
+  "uniqId": "69fbd2e7-bc68-44ee-b546-433b2269befa"
+}

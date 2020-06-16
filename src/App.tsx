@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.scss';
 
 function App() {
+
+  useEffect(() => {
+    fetch('/api/test').then((resp) => {
+      console.log(resp)
+    });
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
